@@ -1,0 +1,11 @@
+{
+    "env": {
+      "APP_STATUS": "DEV",
+      "GOOGLE_MAPS_API_KEY": "AIzaSyAzp3dsvPcpo6j91UXZn1lFn6zmyOfsv9A",
+      "CHANNEL_ACCESS_TOKEN_LINE": "Mlcpds8h2/ubusLtMPWvE2O2FvNOUnN7D4Opx5TGpGbuUU+N8Tp1ogGkBb9tC9/bCCkI+8L4yDhkbsyWLUOIT3f0EwwS65Undf9F2ERgsRp6d7fNOOKRJYY2TbVJFjEOvZAR+a8sr78QVmQGW7cC7QdB04t89/1O/w1cDnyilFU=",
+      "WEB_API_URL": "http://localhost:3000",
+      "WEB_DOMAIN": "http://localhost:3000",
+      "CRYPTOJS_SECRET_KEY": "sepaw_001",
+      "SECRET_KEY": "AIzaSyAMonny"
+    }
+  }
