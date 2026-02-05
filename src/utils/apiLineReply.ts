@@ -1222,7 +1222,7 @@ export const replyNotificationPostback = async ({
                                     style: "primary",
                                     height: "sm",
                                     margin: "md",
-                                    color: "#28a745",
+                                    color: "hsl(227, 72%, 40%)",
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
@@ -1523,7 +1523,7 @@ export const replyNotificationPostbackTemp = async ({
                                     style: "primary",
                                     height: "sm",
                                     margin: "md",
-                                    color: "#28a745",
+                                    color: "#1c3cae",
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
@@ -1651,7 +1651,7 @@ export const replyNotificationPostbackfall = async ({
                                     style: "primary",
                                     height: "sm",
                                     margin: "md",
-                                    color: "#28a745",
+                                    color: "#1c3cae",
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
@@ -1780,7 +1780,7 @@ export const replyNotificationPostbackHeart = async ({
                                     style: "primary",
                                     height: "sm",
                                     margin: "md",
-                                    color: "#28a745",
+                                    color: "#1c3cae",
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
