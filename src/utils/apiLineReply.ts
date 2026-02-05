@@ -1517,6 +1517,19 @@ export const replyNotificationPostbackTemp = async ({
                                         data: `userLineId=${replyToken}&takecarepersonId=${takecarepersonId}&type=${type}`,
                                     }
                                 },
+                                // เพิ่มปุ่มดูตำแหน่งตรงนี้
+                                {
+                                    type: "button",
+                                    style: "primary",
+                                    height: "sm",
+                                    margin: "md",
+                                    color: "#28a745",
+                                    action: {
+                                        type: "uri",
+                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
+                                    }
+                                },
                                 {
                                     type: "text",
                                     text: " ",
@@ -1630,6 +1643,19 @@ export const replyNotificationPostbackfall = async ({
                                         type: "postback",
                                         label: "ส่งความช่วยเหลือเพิ่มเติม",
                                         data: `userLineId=${replyToken}&takecarepersonId=${takecarepersonId}&type=${type}`,
+                                    }
+                                },
+                                // เพิ่มปุ่มดูตำแหน่งตรงนี้
+                                {
+                                    type: "button",
+                                    style: "primary",
+                                    height: "sm",
+                                    margin: "md",
+                                    color: "#28a745",
+                                    action: {
+                                        type: "uri",
+                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
@@ -1746,6 +1772,19 @@ export const replyNotificationPostbackHeart = async ({
                                         type: "postback",
                                         label: "ส่งความช่วยเหลือเพิ่มเติม",
                                         data: `userLineId=${replyToken}&takecarepersonId=${takecarepersonId}&type=${type}`,
+                                    }
+                                },
+                                // เพิ่มปุ่มดูตำแหน่งตรงนี้
+                                {
+                                    type: "button",
+                                    style: "primary",
+                                    height: "sm",
+                                    margin: "md",
+                                    color: "#28a745",
+                                    action: {
+                                        type: "uri",
+                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
