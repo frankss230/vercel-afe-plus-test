@@ -1225,7 +1225,7 @@ export const replyNotificationPostback = async ({
                                     color: "hsl(227, 72%, 40%)",
                                     action: {
                                         type: "uri",
-                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
                                         uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
@@ -1526,7 +1526,7 @@ export const replyNotificationPostbackTemp = async ({
                                     color: "#1c3cae",
                                     action: {
                                         type: "uri",
-                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
                                         uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
@@ -1654,7 +1654,7 @@ export const replyNotificationPostbackfall = async ({
                                     color: "#1c3cae",
                                     action: {
                                         type: "uri",
-                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
                                         uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
@@ -1783,7 +1783,7 @@ export const replyNotificationPostbackHeart = async ({
                                     color: "#1c3cae",
                                     action: {
                                         type: "uri",
-                                        label: "ดูตำแหน่งปัจจุบันของผู้สูงอายุ",
+                                        label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
                                         uri: "https://vercel-afe-plus-test-production.up.railway.app/..." // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
