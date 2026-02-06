@@ -195,12 +195,12 @@ export const replyNotification = async ({
                                     {
                                         type: 'button',
                                         style: 'primary',
-                                        height: 'sm',
+                                        height: 'md',
                                         margin: 'md',
                                         color: '#1976D2',
                                         action: {
                                             type: 'uri',
-                                            label: 'ดูแผนที่',
+                                            label: 'ดูแผนที่/นำทาง',
                                             uri: `https://afe-tracking-demo.vercel.app/navigation`
                                         },
                                     },
