@@ -194,16 +194,17 @@ export const replyNotification = async ({
                                     },
                                     {
                                         type: 'button',
-                                        style: 'secondary',
+                                        style: 'primary',
                                         height: 'sm',
-                                        margin: 'xxl',
-                                        color: '#82868B',
+                                        margin: 'md',
+                                        color: '#1976D2',
                                         action: {
-                                            type: 'postback',
-                                            label: 'ปิดเคสช่วยเหลือ',
-                                            data: `type=close&takecareId=${resTakecareperson.takecare_id}&extenId=${extendedHelpId}&userLineId=${resUser.users_line_id}`,
+                                            type: 'uri',
+                                            label: 'ดูแผนที่',
+                                            uri: `https://afe-tracking-demo.vercel.app/navigation`
                                         },
                                     },
+
                                     {
                                         type: 'button',
                                         style: 'primary',
@@ -236,16 +237,16 @@ export const replyNotification = async ({
                                     },
                                     {
                                         type: 'button',
-                                        style: 'primary',
+                                        style: 'secondary',
                                         height: 'sm',
-                                        margin: 'md',
-                                        color: '#1976D2',
+                                        margin: 'xxl',
+                                        color: '#82868B',
                                         action: {
-                                            type: 'uri',
-                                            label: 'ดูแผนที่',
-                                            uri: `https://afe-tracking-demo.vercel.app/navigation`
-                                        }
-                                    }
+                                            type: 'postback',
+                                            label: 'ปิดเคสช่วยเหลือ',
+                                            data: `type=close&takecareId=${resTakecareperson.takecare_id}&extenId=${extendedHelpId}&userLineId=${resUser.users_line_id}`,
+                                        },
+                                    },
                                 ],
                             },
                         },
