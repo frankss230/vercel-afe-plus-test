@@ -1226,7 +1226,7 @@ export const replyNotificationPostback = async ({
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
-                                        uri: "https://thanaphat-map.vercel.app/?role=admin" // ใส่ URL แผนที่ของคุณ
+                                        uri: "https://afe-tracking-demo.vercel.app/navigation" // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
@@ -1527,7 +1527,7 @@ export const replyNotificationPostbackTemp = async ({
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
-                                        uri: "https://thanaphat-map.vercel.app/?role=admin" // ใส่ URL แผนที่ของคุณ
+                                        uri: "https://afe-tracking-demo.vercel.app/navigation" // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
@@ -1655,7 +1655,7 @@ export const replyNotificationPostbackfall = async ({
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
-                                        uri: "https://thanaphat-map.vercel.app/?role=admin" // ใส่ URL แผนที่ของคุณ
+                                        uri: "https://afe-tracking-demo.vercel.app/navigation" // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
@@ -1784,7 +1784,7 @@ export const replyNotificationPostbackHeart = async ({
                                     action: {
                                         type: "uri",
                                         label: "ดูตำแหน่งผู้มีภาวะพึ่งพิง",
-                                        uri: "https://thanaphat-map.vercel.app/?role=admin" // ใส่ URL แผนที่ของคุณ
+                                        uri: "https://afe-tracking-demo.vercel.app/navigation" // ใส่ URL แผนที่ของคุณ
                                     }
                                 },
                                 {
