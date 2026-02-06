@@ -8,7 +8,7 @@ const LINE_PUSH_MESSAGING_API = 'https://api.line.me/v2/bot/message/push';
 const LINE_PROFILE_API = 'https://api.line.me/v2/bot/profile';
 const LINE_HEADER = {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${process.env.CHANNEL_ACCESS_TOKEN_LINE}`, 
+    Authorization: `Bearer ${process.env.CHANNEL_ACCESS_TOKEN_LINE}`,
 };
 
 interface ReplyNotification {
@@ -193,64 +193,72 @@ export const replyNotification = async ({
                                         },
                                     },
                                     {
-                                        type: 'button',
-                                        style: 'primary',
-                                        height: 'md',
-                                        margin: 'md',
-                                        color: '#1976D2',
-                                        action: {
-                                            type: 'uri',
-                                            label: 'ดูแผนที่/นำทาง',
-                                            uri: `https://afe-tracking-demo.vercel.app/navigation`
-                                        },
+                                        type: 'box',
+                                        layout: 'vertical',
+                                        margin: 'xl',
+                                        paddingStart: 'lg', // ปรับระยะห่างจากขอบซ้าย
+                                        paddingEnd: 'lg',   // ปรับระยะห่างจากขอบขวา
+                                        contents: [
+                                            {
+                                                type: 'button',
+                                                style: 'primary',
+                                                height: 'md',
+                                                margin: 'md',
+                                                color: '#1976D2',
+                                                action: {
+                                                    type: 'uri',
+                                                    label: 'ดูแผนที่/นำทาง',
+                                                    uri: `https://afe-tracking-demo.vercel.app/navigation`
+                                                },
+                                            },
+                                        ]
+                                    },                
+                                            {
+                                                type: 'button',
+                                                style: 'primary',
+                                                height: 'sm',
+                                                margin: 'xxl',
+                                                color: '#f10000',
+                                                action: {
+                                                    type: 'uri',
+                                                    label: 'โทรหาผู้ดูแล',
+                                                    uri: `tel:${resUser.users_tel1}`
+                                                },
+                                            },
+                                            {
+                                                type: 'button',
+                                                style: 'primary',
+                                                height: 'sm',
+                                                margin: 'xxl',
+                                                color: '#f10000',
+                                                action: resTakecareperson.takecare_tel1
+                                                    ? {
+                                                        type: 'uri',
+                                                        label: 'โทรหาผู้มีภาวะพึ่งพิง',
+                                                        uri: `tel:${resTakecareperson.takecare_tel1}`
+                                                    }
+                                                    : {
+                                                        type: 'message',
+                                                        label: 'โทรหาผู้มีภาวะพึ่งพิง',
+                                                        text: 'ไม่มีข้อมูลเบอร์โทรศัพท์ของผู้มีภาวะพึ่งพิง'
+                                                    }
+                                            },
+                                            {
+                                                type: 'button',
+                                                style: 'secondary',
+                                                height: 'sm',
+                                                margin: 'xxl',
+                                                color: '#82868B',
+                                                action: {
+                                                    type: 'postback',
+                                                    label: 'ปิดเคสช่วยเหลือ',
+                                                    data: `type=close&takecareId=${resTakecareperson.takecare_id}&extenId=${extendedHelpId}&userLineId=${resUser.users_line_id}`,
+                                                },
+                                            },
+                                        ],
                                     },
-
-                                    {
-                                        type: 'button',
-                                        style: 'primary',
-                                        height: 'sm',
-                                        margin: 'xxl',
-                                        color: '#f10000',
-                                        action: {
-                                            type: 'uri',
-                                            label: 'โทรหาผู้ดูแล',
-                                            uri: `tel:${resUser.users_tel1}`
-                                        },
-                                    },
-                                    {
-                                        type: 'button',
-                                        style: 'primary',
-                                        height: 'sm',
-                                        margin: 'xxl',
-                                        color: '#f10000',
-                                        action: resTakecareperson.takecare_tel1
-                                            ? {
-                                                type: 'uri',
-                                                label: 'โทรหาผู้มีภาวะพึ่งพิง',
-                                                uri: `tel:${resTakecareperson.takecare_tel1}`
-                                            }
-                                            : {
-                                                type: 'message',
-                                                label: 'โทรหาผู้มีภาวะพึ่งพิง',
-                                                text: 'ไม่มีข้อมูลเบอร์โทรศัพท์ของผู้มีภาวะพึ่งพิง'
-                                            }
-                                    },
-                                    {
-                                        type: 'button',
-                                        style: 'secondary',
-                                        height: 'sm',
-                                        margin: 'xxl',
-                                        color: '#82868B',
-                                        action: {
-                                            type: 'postback',
-                                            label: 'ปิดเคสช่วยเหลือ',
-                                            data: `type=close&takecareId=${resTakecareperson.takecare_id}&extenId=${extendedHelpId}&userLineId=${resUser.users_line_id}`,
-                                        },
-                                    },
-                                ],
-                            },
                         },
-                    },
+                        },
                 ],
             };
 
