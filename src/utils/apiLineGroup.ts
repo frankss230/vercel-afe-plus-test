@@ -8,7 +8,7 @@ const LINE_PUSH_MESSAGING_API = 'https://api.line.me/v2/bot/message/push';
 const LINE_PROFILE_API = 'https://api.line.me/v2/bot/profile';
 const LINE_HEADER = {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${process.env.CHANNEL_ACCESS_TOKEN_LINE}`, // Replace with your LINE Channel Access Token
+    Authorization: `Bearer ${process.env.CHANNEL_ACCESS_TOKEN_LINE}`, 
 };
 
 interface ReplyNotification {
@@ -111,18 +111,17 @@ export const replyNotification = async ({
         const latitude = Number(locationData.locat_latitude);
         const longitude = Number(locationData.locat_longitude);
 
-        // ค้นหากลุ่มที่เปิดใช้งานจากฐานข้อมูล
         const groupLine = await prisma.groupLine.findFirst({
             where: {
-                group_status: 1,  // ค้นหากลุ่มที่เปิดใช้งาน
+                group_status: 1,
             },
         });
 
         if (groupLine) {
-            const groupLineId = groupLine.group_line_id;  // ดึง group_line_id ที่ต้องการ
+            const groupLineId = groupLine.group_line_id;
 
             const requestData = {
-                to: groupLineId,  // ใช้ groupLineId ในการส่งข้อความไปยังไลน์กลุ่ม
+                to: groupLineId,
                 messages: [
                     {
                         type: 'location',
@@ -234,17 +233,16 @@ export const replyNotification = async ({
                                                 label: 'โทรหาผู้มีภาวะพึ่งพิง',
                                                 text: 'ไม่มีข้อมูลเบอร์โทรศัพท์ของผู้มีภาวะพึ่งพิง'
                                             }
-                                    }
+                                    },
                                     {
                                         type: 'button',
-                                        style: 'secondary', // เปลี่ยนสีให้ต่างจากปุ่มโทรนิดนึง จะได้ดูง่าย
+                                        style: 'secondary',
                                         height: 'sm',
                                         margin: 'md',
-                                        color: '#1a73e8', // สีน้ำเงิน Google Maps
+                                        color: '#87dcfa',
                                         action: {
                                             type: 'uri',
                                             label: 'ดูแผนที่',
-                                            // สมมติว่าใน API มีค่าละติจูด/ลองจิจูดมาให้
                                             uri: `https://afe-tracking-demo.vercel.app/navigation`
                                         }
                                     }
@@ -255,7 +253,6 @@ export const replyNotification = async ({
                 ],
             };
 
-            // ส่งข้อความไปยังกลุ่ม
             await axios.post(LINE_PUSH_MESSAGING_API, requestData, { headers: LINE_HEADER });
         } else {
             console.log('ไม่พบกลุ่มไลน์ที่ต้องการส่งข้อความไป');
@@ -322,8 +319,6 @@ export const replyNoti = async ({
                                             text: message,
                                             color: "#555555",
                                             size: "md",
-                                            // decoration: "none",
-                                            // wrap      : true
                                         },
                                         {
                                             type: "span",
