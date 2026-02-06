@@ -239,7 +239,7 @@ export const replyNotification = async ({
                                         style: 'secondary',
                                         height: 'sm',
                                         margin: 'md',
-                                        color: '#87dcfa',
+                                        color: '#FF6D00',
                                         action: {
                                             type: 'uri',
                                             label: 'ดูแผนที่',
