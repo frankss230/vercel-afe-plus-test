@@ -194,10 +194,10 @@ export const replyNotification = async ({
                                     },
                                     {
                                         type: 'button',
-                                        style: 'primary',
+                                        style: 'Secondary',
                                         height: 'sm',
                                         margin: 'xxl',
-                                        color: '#4477CE',
+                                        color: '#82868B',
                                         action: {
                                             type: 'postback',
                                             label: 'ปิดเคสช่วยเหลือ',
@@ -236,10 +236,10 @@ export const replyNotification = async ({
                                     },
                                     {
                                         type: 'button',
-                                        style: 'secondary',
+                                        style: 'primary',
                                         height: 'sm',
                                         margin: 'md',
-                                        color: '#FF6D00',
+                                        color: '#1976D2',
                                         action: {
                                             type: 'uri',
                                             label: 'ดูแผนที่',
