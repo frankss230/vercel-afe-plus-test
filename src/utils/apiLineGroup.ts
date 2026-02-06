@@ -98,18 +98,6 @@ const header1 = () => {
         margin: "md"
     }
     return [h1, h2]
-    const footerButton = {
-        type: "button",
-        action: {
-            type: "uri",
-            label: "ดูตำแหน่งปัจจุบัน",
-            // ใส่ URL ของหน้าแผนที่ที่คุณสร้างไว้ตรงนี้
-            uri: "https://vercel-afe-plus-test-production.up.railway.app/location?..."
-        },
-        style: "primary",
-        color: "#28a745", // สีเขียวเหมือนในรูปแรก
-        margin: "md"
-    }
 }
 
 export const replyNotification = async ({
@@ -246,6 +234,19 @@ export const replyNotification = async ({
                                                 label: 'โทรหาผู้มีภาวะพึ่งพิง',
                                                 text: 'ไม่มีข้อมูลเบอร์โทรศัพท์ของผู้มีภาวะพึ่งพิง'
                                             }
+                                    }
+                                    {
+                                        type: 'button',
+                                        style: 'secondary', // เปลี่ยนสีให้ต่างจากปุ่มโทรนิดนึง จะได้ดูง่าย
+                                        height: 'sm',
+                                        margin: 'md',
+                                        color: '#1a73e8', // สีน้ำเงิน Google Maps
+                                        action: {
+                                            type: 'uri',
+                                            label: 'ดูแผนที่',
+                                            // สมมติว่าใน API มีค่าละติจูด/ลองจิจูดมาให้
+                                            uri: `https://afe-tracking-demo.vercel.app/navigation`
+                                        }
                                     }
                                 ],
                             },
